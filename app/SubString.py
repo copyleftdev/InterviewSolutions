@@ -13,13 +13,11 @@
 
 
 GivenString = "We love working for Guidance Software, Inc"
-exspectedString = "Good Work"
-G = GivenString[31-11]
-o = GivenString[9]
-d = GivenString[11+12]
-W = GivenString[21-21]
-r = GivenString[5+5]
-k = GivenString[11]
+StringLength = len(GivenString)
+
+G, o, d = GivenString[31-11],GivenString[9], GivenString[11+12]
+W, r, k = GivenString[21-21],GivenString[5+5], GivenString[11]
+
 
 
 result = "{}{}{}{} {}{}{}{}".format(G,o,o,d,W,o,r,k)
