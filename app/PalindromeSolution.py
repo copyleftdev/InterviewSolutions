@@ -21,7 +21,13 @@ import string
 import unittest
 
 def isPalindrome(inputString):
-    convertToLowerCase = inputString.lower()
+
+    if inputString == int or inputString == float:
+        str(inputString)
+
+
+    inputString = str(inputString)
+    convertToLowerCase = str(inputString.lower())
     stripedSpaces = ''.join(convertToLowerCase.split())
     charExcludeList = []
 
@@ -36,7 +42,7 @@ def isPalindrome(inputString):
             stripedSpaces = stripedSpaces.replace(punct,"")
 
     MyString = stripedSpaces
-    RevString = list(reversed(stripedSpaces))
+    RevString = list(reversed(MyString)) #alternative reverse striped
 
     if list(MyString) == list(RevString):
         return True
@@ -72,12 +78,12 @@ class TestPalindrome(unittest.TestCase):
         self.assertEquals(self.assertVector,False)
     
     def test_non_palindrome_uppercase_string_single_word(self):
-        self.word = "dfe"
+        self.word = "DFE"
         self.assertVector = isPalindrome(self.word);
         self.assertEquals(self.assertVector,False)
     
     def test_non_palindrome_mixedcase_string_single_word(self):
-        self.word = "dfe"
+        self.word = "dFe"
         self.assertVector = isPalindrome(self.word);
         self.assertEquals(self.assertVector,False)
 
@@ -137,6 +143,27 @@ class TestPalindrome(unittest.TestCase):
         self.stringb = "a fatness. I diet on cod."
         self.assertVector = isPalindrome(self.stringa + self.stringb)
         self.assertEquals(self.assertVector, True)
+
+    def test_integer_palindrome(self):
+        self.number = 666
+        self.assertVector = isPalindrome(self.number)
+        self.assertEquals(self.assertVector, True)
+    
+    def test_integer_non_palindrome(self):
+        self.number = 669
+        self.assertVector = isPalindrome(self.number)
+        self.assertEquals(self.assertVector, False)
+    
+    def test_floatpoint_number_palindrome(self):
+        self.floatpoint = 1.1
+        self.assertVector = isPalindrome(self.floatpoint)
+        self.assertEquals(self.assertVector, True)
+    
+    def test_floatpoint_number_non_palindrome(self):
+        self.floatpoint = 1.2
+        self.assertVector = isPalindrome(self.floatpoint)
+        self.assertEquals(self.assertVector, False)
+
 
 
 if __name__ == "__main__":

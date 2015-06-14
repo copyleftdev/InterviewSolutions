@@ -8,7 +8,7 @@
  #Find the total length of the given string " We love working for Guidance Software, Inc" 
  
  #Step 2.
- #With the provided values (21,31,18,24,3,9,5,11,12) create a new string with an expected 
+ #With the provided values (7,31,18,24,3,9,5,11,12) create a new string with an expected 
  #result of "Good Work"
 
 
