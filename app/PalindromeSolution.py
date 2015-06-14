@@ -43,7 +43,7 @@ def isPalindrome(inputString):
     else:
         return False
 
-
+#Unit tests for isPalindrome
 class TestPalindrome(unittest.TestCase):
 
     def test_palindrome_lowercase_string_single_word(self):
