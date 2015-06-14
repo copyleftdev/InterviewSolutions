@@ -132,6 +132,11 @@ class TestPalindrome(unittest.TestCase):
         self.assertVector = isPalindrome(self.multi_line)
         self.assertEquals(self.assertVector, True)
 
+    def test_concatenated_palindrome_string_values(self):
+        self.stringa = "Doc, note, I Dissent. A fast never prevents "
+        self.stringb = "a fatness. I diet on cod."
+        self.assertVector = isPalindrome(self.stringa + self.stringb)
+        self.assertEquals(self.assertVector, True)
 
 
 if __name__ == "__main__":
