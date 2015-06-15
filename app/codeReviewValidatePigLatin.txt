@@ -1,0 +1,26 @@
+1. IsVowel does not have a condtions for char == 'y' line 12 in ConvertToPigLatin.cs
+2. When you introduce puncuation chars, the characters (? !) are retaining the corrent position.
+3. 
+4. Unhandles Exception when All UPPERCASE chars.
+
+   System.IndexOutOfRangeException was unhandled
+  HResult=-2146233080
+  Message=Index was outside the bounds of the array.
+  Source=mscorlib
+  StackTrace:
+       at System.String.get_Chars(Int32 index)
+       at ValidatePigLatin.ConvertToPigLatin.ConvertWordToPigLatin(String strIn, String& strOut) in \\vmware-host\shared folders\Downloads 2\c#\InterviewQuestions\ValidatePigLatin\ConvertToPigLatin.cs:line 32
+       at ValidatePigLatin.ConvertToPigLatin.ConvertStringToPigLatin(String strIn, String& strOut) in \\vmware-host\shared folders\Downloads 2\c#\InterviewQuestions\ValidatePigLatin\ConvertToPigLatin.cs:line 58
+       at ValidatePigLatin.ValidatePigLatin.Main(String[] args) in \\vmware-host\shared folders\Downloads 2\c#\InterviewQuestions\ValidatePigLatin\ValidatePigLatin.cs:line 34
+       at System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+       at System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+       at Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+       at System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+       at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+       at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+       at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+       at System.Threading.ThreadHelper.ThreadStart()
+  InnerException:
+
+
+
